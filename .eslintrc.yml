@@ -1,0 +1,39 @@
+root: true
+env:
+  browser: true
+  es2022: true
+extends:
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:vue/vue3-recommended'
+  - 'prettier'
+parserOptions:
+  ecmaVersion: 'latest'
+  extraFileExtensions:
+    - '.vue'
+  project:
+    - './tsconfig.json'
+  sourceType: 'module'
+plugins:
+  - '@typescript-eslint'
+  - 'jsdoc'
+overrides:
+  - files:
+      - 'src/layouts/*.vue'
+      - 'src/pages/**/*.vue'
+      - 'src/error.vue'
+    rules:
+      vue/multi-word-component-names: 'off'
+rules:
+  vue/component-name-in-template-casing:
+    - 'error'
+    - 'PascalCase'
+    - registeredComponentsOnly: false
+  vue/v-on-event-hyphenation: 'off'
+  jsdoc/require-jsdoc:
+    - 'error'
+    - require:
+        FunctionDeclaration: true
+        MethodDefinition: true
+        ClassDeclaration: true
+        ArrowFunctionExpression: true
+        FunctionExpression: true

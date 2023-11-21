@@ -3,6 +3,7 @@
 - Nuxt3
 - Vuetify
 - Vitest
+- Prettier + ESLint
 
 ## Setup
 
@@ -13,5 +14,9 @@
 ```bash
 pnpm install
 
+# Develop
 pnpm run dev
+
+# Testing
+pnpm run test
 ```
