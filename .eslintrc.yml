@@ -6,6 +6,7 @@ extends:
   - 'plugin:@typescript-eslint/recommended'
   - 'plugin:vue/vue3-recommended'
   - 'prettier'
+parser: 'vue3'
 parserOptions:
   ecmaVersion: 'latest'
   extraFileExtensions:
